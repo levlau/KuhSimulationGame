@@ -328,11 +328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6669081561643302212, guid: 91230f4875c3f3c4d9011fca8516369c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6669081561643302212, guid: 91230f4875c3f3c4d9011fca8516369c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.45
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 6669081561643302212, guid: 91230f4875c3f3c4d9011fca8516369c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -365,6 +365,18 @@ PrefabInstance:
     - target: {fileID: 6669081561643302212, guid: 91230f4875c3f3c4d9011fca8516369c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120974843079151765, guid: 91230f4875c3f3c4d9011fca8516369c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120974843079151765, guid: 91230f4875c3f3c4d9011fca8516369c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120974843079151765, guid: 91230f4875c3f3c4d9011fca8516369c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91230f4875c3f3c4d9011fca8516369c, type: 3}
@@ -531,3 +543,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2116511653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116511651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164617d182326da4dbd76bc9b9110359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KuhClickUI: {fileID: 0}

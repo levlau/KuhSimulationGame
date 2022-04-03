@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Kuh : MonoBehaviour
 {
-    string Name = "Default";
+    //Die random namen die beim erstellen von einer kuh vergeben werden können, weil sie sonst am anfang keinen namen hat
+    string[] possibleRandomNames = { "Berta", "Bertha", "Herbert", "Hubert", "Hans", "Horst", "Brigitte", "Quengelbert", "Engelbert", "Mina" }; 
+
+    string Name;
     int Alter = 0;
 
     float Milchstand = 0f;
@@ -17,12 +20,14 @@ public class Kuh : MonoBehaviour
     //UNITY FUNCTIONS
     private void Start()
     {
+        Name = possibleRandomNames[Random.Range(0, possibleRandomNames.Length - 1)];    //Random name gebe wenn die kuh erstellt wird
         animator = GetComponent<Animator>();
     }
 
     private void OnMouseDown()
     {
         animator.Play("OnClick", 0);
+        GetComponent<UI_Manager>().ActivateUI();
     }
 
 
