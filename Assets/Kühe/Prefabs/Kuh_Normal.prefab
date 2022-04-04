@@ -1282,6 +1282,8 @@ GameObject:
   - component: {fileID: -2322058410717783026}
   - component: {fileID: 2633665096859578400}
   - component: {fileID: 1505707671821331901}
+  - component: {fileID: 2116511652}
+  - component: {fileID: 2116511653}
   m_Layer: 0
   m_Name: Kuh_Normal
   m_TagString: Untagged
@@ -1375,6 +1377,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.34, y: 4.5, z: 6.09}
   m_Center: {x: 0, y: 0, z: 0.75}
+--- !u!95 &2116511652
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6324891109376616446}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 141d9b7ea27f7bb4b832f1af163aa9d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2116511653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6324891109376616446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164617d182326da4dbd76bc9b9110359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KuhClickUI: {fileID: 0}
 --- !u!1 &6756783835235922716
 GameObject:
   m_ObjectHideFlags: 0
