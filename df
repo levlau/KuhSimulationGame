@@ -1,0 +1,47 @@
+[33mcommit b62623129cb4ff296a65fb1fe4bc240009f5f095[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mcow/master[m[33m)[m
+Author: Levi Laur <l.laur@wms-hn.org>
+Date:   Mon Apr 4 12:58:09 2022 +0200
+
+    testordner gelöscht
+
+[33mcommit 15bb061e2abefca1e588e3f267d0ba2c92049135[m
+Author: Levi Laur <l.laur@wms-hn.org>
+Date:   Mon Apr 4 12:53:48 2022 +0200
+
+    Ordner hinzugefügt
+
+[33mcommit f2895588abccc45a1dcd43bc11698dfbb6dc5a9c[m
+Author: Levi Laur <l.laur@wms-hn.org>
+Date:   Mon Apr 4 12:51:47 2022 +0200
+
+    UI angefangen
+
+[33mcommit 192407e3a7077f1989376b6d837f7d87cdb36e5a[m
+Author: levi <levlau@web.de>
+Date:   Sun Apr 3 16:26:28 2022 +0200
+
+    LaufAnimation + wenig code mehr
+
+[33mcommit 4bc5119553578420b9127c6bed9c6aae9211b343[m
+Author: levi <levlau@web.de>
+Date:   Sat Apr 2 17:28:13 2022 +0200
+
+    test
+
+[33mcommit 5349f5dc1119a72c04c5c6d434825efd914d5a33[m
+Author: levlau <102825355+levlau@users.noreply.github.com>
+Date:   Sat Apr 2 15:24:39 2022 +0000
+
+    Create TODO.txt
+
+[33mcommit 17acf0edede698ca850edf984bbc902bb16035c4[m
+Author: levi <levlau@web.de>
+Date:   Sat Apr 2 17:12:44 2022 +0200
+
+    Initialisation with gitignore
+
+[33mcommit 0a12688a91136d0d38d66b2cc93fff62498ce831[m
+Author: levlau <102825355+levlau@users.noreply.github.com>
+Date:   Fri Apr 1 18:09:52 2022 +0000
+
+    Initial commit
