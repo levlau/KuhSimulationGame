@@ -1283,7 +1283,7 @@ GameObject:
   - component: {fileID: 2633665096859578400}
   - component: {fileID: 1505707671821331901}
   - component: {fileID: 2116511652}
-  - component: {fileID: 2116511653}
+  - component: {fileID: 3158427916963610044}
   m_Layer: 0
   m_Name: Kuh_Normal
   m_TagString: Untagged
@@ -1323,6 +1323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7156e3e023349ec44a96dbbe518f552d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnClickUI: {fileID: 0}
 --- !u!23 &2633665096859578400
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1396,7 +1397,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2116511653
+--- !u!114 &3158427916963610044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1405,10 +1406,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6324891109376616446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164617d182326da4dbd76bc9b9110359, type: 3}
+  m_Script: {fileID: 11500000, guid: 7156e3e023349ec44a96dbbe518f552d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KuhClickUI: {fileID: 0}
+  OnClickUI: {fileID: 5512095062622405509, guid: 575a70990325bd948950e8ca42dfa8a2, type: 3}
 --- !u!1 &6756783835235922716
 GameObject:
   m_ObjectHideFlags: 0
