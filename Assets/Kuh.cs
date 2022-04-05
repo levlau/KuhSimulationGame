@@ -5,7 +5,9 @@ using UnityEngine;
 public class Kuh : MonoBehaviour
 {
     //Die random namen die beim erstellen von einer kuh vergeben werden können, weil sie sonst am anfang keinen namen hat
-    string[] possibleRandomNames = { "Berta", "Bertha", "Herbert", "Hubert", "Hans", "Horst", "Brigitte", "Quengelbert", "Engelbert", "Mina" }; 
+    string[] possibleRandomNames = { "Berta", "Bertha", "Herbert", "Hubert","Huberta", "Hans", "Horst", "Brigitte", "Quengelbert", "Engelbert", "Mina" };
+
+    [SerializeField] GameObject OnClickUI;
 
     string Name;
     int Alter = 0;
@@ -27,7 +29,13 @@ public class Kuh : MonoBehaviour
     private void OnMouseDown()
     {
         animator.Play("OnClick", 0);
-        GetComponent<UI_Manager>().ActivateUI();
+
+        GameObject go = GameObject.FindGameObjectWithTag("UI");
+        Destroy(go);
+
+        GameObject ui = Instantiate(OnClickUI);
+        ui.SetActive(true);
+        ui.GetComponent<CanvasPositioner>().Constructor(gameObject);
     }
 
 

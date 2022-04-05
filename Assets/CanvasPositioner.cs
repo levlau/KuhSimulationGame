@@ -5,20 +5,27 @@ using UnityEngine;
 public class CanvasPositioner : MonoBehaviour
 {
     Vector3 position;
-    Quaternion rotation;
+
+    [SerializeField] Vector3 cowPosOffset;
+    Vector3 mainCameraPos;
     GameObject cow;
-    Camera mainCam;
 
     public void Constructor(GameObject clickedCow)
     {
         cow = clickedCow;
-        position = cow.transform.position;
-        mainCam = Camera.main;
     }
 
     private void Update()
     {
+        mainCameraPos = Camera.main.transform.position;
+        position = cow.transform.position + cowPosOffset;
+
+        transform.LookAt(mainCameraPos);
         transform.position = position;
-        transform.rotation = rotation;
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Destroy(gameObject);
+        }
     }
 }
