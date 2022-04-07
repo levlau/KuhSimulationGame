@@ -1324,6 +1324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnClickUI: {fileID: 0}
+  ManagerGameObject: {fileID: 0}
 --- !u!23 &2633665096859578400
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1410,6 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnClickUI: {fileID: 5512095062622405509, guid: 575a70990325bd948950e8ca42dfa8a2, type: 3}
+  ManagerGameObject: {fileID: 3310522345126531856, guid: 0f888f3b1cda2434bbb19fe96f8bd085, type: 3}
 --- !u!1 &6756783835235922716
 GameObject:
   m_ObjectHideFlags: 0

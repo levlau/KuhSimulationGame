@@ -188,4 +188,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a6d3c1cfc89fc4f9fdea3c88dfc409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cowPosOffset: {x: 0, y: 5, z: 0}
+  cowPosOffset: {x: 0, y: 4, z: 0}
