@@ -5,9 +5,7 @@ using UnityEngine;
 public class Kuh : MonoBehaviour
 {
     //Die random namen die beim erstellen von einer kuh vergeben werden können, weil sie sonst am anfang keinen namen hat
-    string[] possibleRandomNames = { "Berta", "Bertha", "Herbert", "Hubert","Huberta", "Hans", "Horst", "Brigitte", "Quengelbert", "Engelbert", "Mina" };
-
-    [SerializeField] GameObject OnClickUI;
+    string[] possibleRandomNames = { "Berta", "Bertha", "Herbert", "Hubert", "Hans", "Horst", "Brigitte", "Quengelbert", "Engelbert", "Mina" }; 
 
     string Name;
     int Age = 0;
@@ -21,16 +19,6 @@ public class Kuh : MonoBehaviour
 
     //Krankheiten
 
-    bool NoMilk4u = false;
-    bool WeightLoss = false;
-    bool Diabetes = false;
-
-
-    //Krankheitstimer
-
-    int NoMilk4uTime = 0;
-    int WeightLossTime = 0;
-    string DiabetesTime = "lifetime";
 
     //Game stuff
     Animator animator;
@@ -45,13 +33,7 @@ public class Kuh : MonoBehaviour
     private void OnMouseDown()
     {
         animator.Play("OnClick", 0);
-
-        GameObject go = GameObject.FindGameObjectWithTag("UI");
-        Destroy(go);
-
-        GameObject ui = Instantiate(OnClickUI);
-        ui.SetActive(true);
-        ui.GetComponent<CanvasPositioner>().Constructor(gameObject);
+        GetComponent<UI_Manager>().ActivateUI();
     }
 
 
