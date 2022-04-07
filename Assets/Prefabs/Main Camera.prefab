@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007d887e35f703a46939aee771473298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plane: {fileID: 0}
+  rotatePoint: {fileID: 5551920432274879629, guid: 1c3405077661a084f8458e146ff3e940, type: 3}
   offset: {x: 0, y: 20, z: -25}
-  minZAenderung: -350
-  maxZAenderung: 200
-  camMovementSpeed: 45
+  minZAenderung: -20
+  maxZAenderung: 20
+  camMovementSpeed: 40
