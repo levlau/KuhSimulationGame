@@ -8,11 +8,27 @@ public class Kuh : MonoBehaviour
     string[] possibleRandomNames = { "Berta", "Bertha", "Herbert", "Hubert", "Hans", "Horst", "Brigitte", "Quengelbert", "Engelbert", "Mina" }; 
 
     string Name;
-    int Alter = 0;
+    int Age = 0;
 
-    float Milchstand = 0f;
-    float Gewicht = 5f;
-    float FutterLeft = 5f;
+    float MilkAmount = 0f;
+    float Weight = 5f;
+    float AddWeightModifier = 1f;
+    float Nutrition = 5f;
+    float NutritionModifier = 1f;
+    
+
+    //Krankheiten
+
+    bool NoMilk4u = false;
+    bool WeightLoss = false;
+    bool Diabetes = false;
+
+
+    //Krankheitstimer
+
+    int NoMilk4uTime = 0;
+    int WeightLossTime = 0;
+    string DiabetesTime = "lifetime";
 
     //Game stuff
     Animator animator;
@@ -36,42 +52,82 @@ public class Kuh : MonoBehaviour
     {
         return Name;
     }
-    public int GetAlter()
+    public int GetAge()
     {
-        return Alter;
+        return Age;
     }
-    public float GetMilchstand()
+    public float GetMilkamount()
     {
-        return Milchstand;
+        return MilkAmount;
     }
-    public float GetGewicht()
+    public float GetWeight()
     {
-        return Gewicht;
+        return Weight;
     }
-    public float GetFutterLeft()
+    public float GetNutrition()
     {
-        return FutterLeft;
+        return Nutrition;
     }
 
 
     //SET FUNCTIONS
-    public void Taufen(string name)
+    public void SetName(string name)
     {
         Name = name;
     }
-
-
-    //CHANGE FUNCTIONS
-    public void Fuettern(float amount)
+    public void SetIllnes()
     {
-        Gewicht += amount;
-        FutterLeft += amount;
+        int rndTmp = 0;
+        rndTmp = Random.Range(0, 2);
+
+        switch (rndTmp)
+        {
+            case 0:
+                NoMilk4u = true;
+                NoMilk4uTime = 5 + Random.Range(0, 20);
+                break;
+
+            case 1:
+                WeightLoss = true;
+                WeightLossTime = 5 + Random.Range(0, 20);
+                break;
+
+            case 2:
+                Diabetes = true;
+                break;
+
+            default:
+                break;
+        }
     }
 
-    public float Melken()
+    //CHANGE FUNCTIONS
+    public void Feed(float amount, float FoodWeightModifier, float FoodNutritionModifier)
     {
-        float tmp = Milchstand;
-        Milchstand = 0;
+        Weight += amount * AddWeightModifier * FoodWeightModifier;
+        Nutrition += amount * NutritionModifier * FoodNutritionModifier;
+    }
+
+    public float Milk()
+    {
+        float tmp = MilkAmount;
+        MilkAmount = 0;
         return tmp;
+    }
+    public void ChangeAge()
+    {
+        if (Age > 0)
+        {
+            Age++;
+        }
+        SetIllnes();
+    }
+
+
+    //Krankheiten
+
+    public void NoMilk4()
+    {
+
     }
 }
