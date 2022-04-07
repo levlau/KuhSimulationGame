@@ -9,8 +9,6 @@ public class Kuh : MonoBehaviour
 
     [SerializeField] GameObject OnClickUI;
 
-    [SerializeField] GameObject ManagerGameObject;
-
     string Name;
     int Age = 0;
 
@@ -40,8 +38,6 @@ public class Kuh : MonoBehaviour
     //UNITY FUNCTIONS
     private void Start()
     {
-        DataBase stats = ManagerGameObject.GetComponent<DataBase>();
-
         Name = possibleRandomNames[Random.Range(0, possibleRandomNames.Length - 1)];    //Random name gebe wenn die kuh erstellt wird
         animator = GetComponent<Animator>();
     }
