@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] Transform plane;
+    [SerializeField] Transform rotatePoint;
     [SerializeField] Vector3 offset;
 
     [SerializeField] float minZAenderung;
@@ -21,34 +21,17 @@ public class CameraMovement : MonoBehaviour
     private void Start()
     {
         transform.position = offset;
-
-        minZAenderung *= camMovementSpeed;
-        maxZAenderung *= camMovementSpeed;
     }
-
-    /*
-    private void Update()
-    {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-
-        move = new Vector3(horizontal * Time.deltaTime, 0f, vertical * 0.9f * Time.deltaTime) * camMovementSpeed;
-
-        transform.SetPositionAndRotation(transform.localPosition + move, transform.rotation);
-
-        transform.Translate(move * camMovementSpeed);
-        transform.LookAt(plane);
-    }*/
 
     private void Update()
     {
         if (zAenderung < maxZAenderung && Input.GetKey(KeyCode.W))
         {
-            vertical = camMovementSpeed;
+            vertical = camMovementSpeed * Time.deltaTime;
         }
         else if (zAenderung > minZAenderung && Input.GetKey(KeyCode.S))
         {
-            vertical = -camMovementSpeed;
+            vertical = -camMovementSpeed * Time.deltaTime;
         }
         else
         {
@@ -57,11 +40,11 @@ public class CameraMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            horizontal = -camMovementSpeed;
+            horizontal = -camMovementSpeed * Time.deltaTime;
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            horizontal = camMovementSpeed;
+            horizontal = camMovementSpeed * Time.deltaTime;
         }
         else
         {
@@ -72,7 +55,7 @@ public class CameraMovement : MonoBehaviour
 
         zAenderung += move.z;
 
-        transform.Translate(move * Time.deltaTime);
-        transform.LookAt(plane);
+        transform.Translate(move);
+        transform.LookAt(rotatePoint.position);
     }
 }
