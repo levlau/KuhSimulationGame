@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CanvasPositioner : MonoBehaviour
@@ -8,7 +9,20 @@ public class CanvasPositioner : MonoBehaviour
 
     [SerializeField] Vector3 cowPosOffset;
     Vector3 mainCameraPos;
+
     GameObject cow;
+    Kuh kuh;
+
+    private void Start()
+    {
+        kuh = cow.GetComponent<Kuh>();
+
+        GameObject.Find("name").GetComponent<TextMeshProUGUI>().text = kuh.GetName();
+        GameObject.Find("weight").GetComponent<TextMeshProUGUI>().text = kuh.GetWeight().ToString() + " kg";
+        GameObject.Find("age").GetComponent<TextMeshProUGUI>().text = kuh.GetAge().ToString() + " D";
+        GameObject.Find("milk").GetComponent<TextMeshProUGUI>().text = kuh.GetMilkamount().ToString() + " l";
+        GameObject.Find("nutrition").GetComponent<TextMeshProUGUI>().text = kuh.GetNutrition().ToString();
+    }
 
     public void Constructor(GameObject clickedCow)
     {

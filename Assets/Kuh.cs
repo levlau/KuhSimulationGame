@@ -46,7 +46,7 @@ public class Kuh : MonoBehaviour
     {
         animator.Play("OnClick", 0);
 
-        if (GameObject.FindGameObjectsWithTag("UI") == null)    
+        if (GameObject.FindGameObjectWithTag("UI") == false)    
         {
             GameObject ui = Instantiate(OnClickUI);
             ui.SetActive(true);
