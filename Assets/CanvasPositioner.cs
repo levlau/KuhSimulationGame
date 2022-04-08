@@ -17,6 +17,11 @@ public class CanvasPositioner : MonoBehaviour
     {
         kuh = cow.GetComponent<Kuh>();
 
+        UpdateStats();
+    }
+
+    private void UpdateStats()
+    {
         GameObject.Find("name").GetComponent<TextMeshProUGUI>().text = kuh.GetName();
         GameObject.Find("weight").GetComponent<TextMeshProUGUI>().text = kuh.GetWeight().ToString() + " kg";
         GameObject.Find("age").GetComponent<TextMeshProUGUI>().text = kuh.GetAge().ToString() + " D";
@@ -41,5 +46,17 @@ public class CanvasPositioner : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void CowAction(string action)
+    {
+        switch (action)
+        {
+            case "milk":
+                kuh.Milk();
+                break;
+        }
+
+        UpdateStats();    
     }
 }
