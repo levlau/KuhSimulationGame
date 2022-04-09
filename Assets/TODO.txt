@@ -1,0 +1,7 @@
+LEVI:
+-Kuh random movement
+-UI
+
+
+MATTHIAS:
+-Database objekt und klasse die informationen (Geld, andere Stats) speichert
