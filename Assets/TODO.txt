@@ -1,7 +1,8 @@
 LEVI:
 -Kuh random movement
--UI
+-UI mit interaktionen
 
 
 MATTHIAS:
 -Database objekt und klasse die informationen (Geld, andere Stats) speichert
+-in der kuh klasse "nahrungsverbrauch, krankheiten, altern" machen 
